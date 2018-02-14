@@ -1,0 +1,980 @@
+
+% Default to the notebook output style
+
+    
+
+
+% Inherit from the specified cell style.
+
+
+
+
+    
+\documentclass[11pt]{article}
+
+    
+    
+    \usepackage[T1]{fontenc}
+    % Nicer default font (+ math font) than Computer Modern for most use cases
+    \usepackage{mathpazo}
+
+    % Basic figure setup, for now with no caption control since it's done
+    % automatically by Pandoc (which extracts ![](path) syntax from Markdown).
+    \usepackage{graphicx}
+    % We will generate all images so they have a width \maxwidth. This means
+    % that they will get their normal width if they fit onto the page, but
+    % are scaled down if they would overflow the margins.
+    \makeatletter
+    \def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth
+    \else\Gin@nat@width\fi}
+    \makeatother
+    \let\Oldincludegraphics\includegraphics
+    % Set max figure width to be 80% of text width, for now hardcoded.
+    \renewcommand{\includegraphics}[1]{\Oldincludegraphics[width=.8\maxwidth]{#1}}
+    % Ensure that by default, figures have no caption (until we provide a
+    % proper Figure object with a Caption API and a way to capture that
+    % in the conversion process - todo).
+    \usepackage{caption}
+    \DeclareCaptionLabelFormat{nolabel}{}
+    \captionsetup{labelformat=nolabel}
+
+    \usepackage{adjustbox} % Used to constrain images to a maximum size 
+    \usepackage{xcolor} % Allow colors to be defined
+    \usepackage{enumerate} % Needed for markdown enumerations to work
+    \usepackage{geometry} % Used to adjust the document margins
+    \usepackage{amsmath} % Equations
+    \usepackage{amssymb} % Equations
+    \usepackage{textcomp} % defines textquotesingle
+    % Hack from http://tex.stackexchange.com/a/47451/13684:
+    \AtBeginDocument{%
+        \def\PYZsq{\textquotesingle}% Upright quotes in Pygmentized code
+    }
+    \usepackage{upquote} % Upright quotes for verbatim code
+    \usepackage{eurosym} % defines \euro
+    \usepackage[mathletters]{ucs} % Extended unicode (utf-8) support
+    \usepackage[utf8x]{inputenc} % Allow utf-8 characters in the tex document
+    \usepackage{fancyvrb} % verbatim replacement that allows latex
+    \usepackage{grffile} % extends the file name processing of package graphics 
+                         % to support a larger range 
+    % The hyperref package gives us a pdf with properly built
+    % internal navigation ('pdf bookmarks' for the table of contents,
+    % internal cross-reference links, web links for URLs, etc.)
+    \usepackage{hyperref}
+    \usepackage{longtable} % longtable support required by pandoc >1.10
+    \usepackage{booktabs}  % table support for pandoc > 1.12.2
+    \usepackage[inline]{enumitem} % IRkernel/repr support (it uses the enumerate* environment)
+    \usepackage[normalem]{ulem} % ulem is needed to support strikethroughs (\sout)
+                                % normalem makes italics be italics, not underlines
+    
+
+    
+    
+    % Colors for the hyperref package
+    \definecolor{urlcolor}{rgb}{0,.145,.698}
+    \definecolor{linkcolor}{rgb}{.71,0.21,0.01}
+    \definecolor{citecolor}{rgb}{.12,.54,.11}
+
+    % ANSI colors
+    \definecolor{ansi-black}{HTML}{3E424D}
+    \definecolor{ansi-black-intense}{HTML}{282C36}
+    \definecolor{ansi-red}{HTML}{E75C58}
+    \definecolor{ansi-red-intense}{HTML}{B22B31}
+    \definecolor{ansi-green}{HTML}{00A250}
+    \definecolor{ansi-green-intense}{HTML}{007427}
+    \definecolor{ansi-yellow}{HTML}{DDB62B}
+    \definecolor{ansi-yellow-intense}{HTML}{B27D12}
+    \definecolor{ansi-blue}{HTML}{208FFB}
+    \definecolor{ansi-blue-intense}{HTML}{0065CA}
+    \definecolor{ansi-magenta}{HTML}{D160C4}
+    \definecolor{ansi-magenta-intense}{HTML}{A03196}
+    \definecolor{ansi-cyan}{HTML}{60C6C8}
+    \definecolor{ansi-cyan-intense}{HTML}{258F8F}
+    \definecolor{ansi-white}{HTML}{C5C1B4}
+    \definecolor{ansi-white-intense}{HTML}{A1A6B2}
+
+    % commands and environments needed by pandoc snippets
+    % extracted from the output of `pandoc -s`
+    \providecommand{\tightlist}{%
+      \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+    \DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+    % Add ',fontsize=\small' for more characters per line
+    \newenvironment{Shaded}{}{}
+    \newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.56,0.13,0.00}{{#1}}}
+    \newcommand{\DecValTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\FloatTok}[1]{\textcolor[rgb]{0.25,0.63,0.44}{{#1}}}
+    \newcommand{\CharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\StringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\CommentTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textit{{#1}}}}
+    \newcommand{\OtherTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{{#1}}}
+    \newcommand{\AlertTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.02,0.16,0.49}{{#1}}}
+    \newcommand{\RegionMarkerTok}[1]{{#1}}
+    \newcommand{\ErrorTok}[1]{\textcolor[rgb]{1.00,0.00,0.00}{\textbf{{#1}}}}
+    \newcommand{\NormalTok}[1]{{#1}}
+    
+    % Additional commands for more recent versions of Pandoc
+    \newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.53,0.00,0.00}{{#1}}}
+    \newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.25,0.44,0.63}{{#1}}}
+    \newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.73,0.40,0.53}{{#1}}}
+    \newcommand{\ImportTok}[1]{{#1}}
+    \newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.73,0.13,0.13}{\textit{{#1}}}}
+    \newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\VariableTok}[1]{\textcolor[rgb]{0.10,0.09,0.49}{{#1}}}
+    \newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.00,0.44,0.13}{\textbf{{#1}}}}
+    \newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.40,0.40,0.40}{{#1}}}
+    \newcommand{\BuiltInTok}[1]{{#1}}
+    \newcommand{\ExtensionTok}[1]{{#1}}
+    \newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.74,0.48,0.00}{{#1}}}
+    \newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.49,0.56,0.16}{{#1}}}
+    \newcommand{\InformationTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    \newcommand{\WarningTok}[1]{\textcolor[rgb]{0.38,0.63,0.69}{\textbf{\textit{{#1}}}}}
+    
+    
+    % Define a nice break command that doesn't care if a line doesn't already
+    % exist.
+    \def\br{\hspace*{\fill} \\* }
+    % Math Jax compatability definitions
+    \def\gt{>}
+    \def\lt{<}
+    % Document parameters
+    \title{Predict Next Character Step by Step}
+    
+    
+    
+
+    % Pygments definitions
+    
+\makeatletter
+\def\PY@reset{\let\PY@it=\relax \let\PY@bf=\relax%
+    \let\PY@ul=\relax \let\PY@tc=\relax%
+    \let\PY@bc=\relax \let\PY@ff=\relax}
+\def\PY@tok#1{\csname PY@tok@#1\endcsname}
+\def\PY@toks#1+{\ifx\relax#1\empty\else%
+    \PY@tok{#1}\expandafter\PY@toks\fi}
+\def\PY@do#1{\PY@bc{\PY@tc{\PY@ul{%
+    \PY@it{\PY@bf{\PY@ff{#1}}}}}}}
+\def\PY#1#2{\PY@reset\PY@toks#1+\relax+\PY@do{#2}}
+
+\expandafter\def\csname PY@tok@se\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.13}{##1}}}
+\expandafter\def\csname PY@tok@kd\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.27,0.87}{##1}}}
+\expandafter\def\csname PY@tok@dl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@nv\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@nd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@fm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@no\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@s2\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@kt\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.69,0.00,0.25}{##1}}}
+\expandafter\def\csname PY@tok@ss\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@cp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.74,0.48,0.00}{##1}}}
+\expandafter\def\csname PY@tok@ni\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.60,0.60,0.60}{##1}}}
+\expandafter\def\csname PY@tok@c\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@bp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nt\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@il\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@ge\endcsname{\let\PY@it=\textit}
+\expandafter\def\csname PY@tok@na\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.49,0.56,0.16}{##1}}}
+\expandafter\def\csname PY@tok@gh\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@vc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@sr\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@sc\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@vm\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@mb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@s1\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@gs\endcsname{\let\PY@bf=\textbf}
+\expandafter\def\csname PY@tok@cm\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@sb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@nc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@gu\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.50,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@gi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@go\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.53,0.53,0.53}{##1}}}
+\expandafter\def\csname PY@tok@nl\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.63,0.00}{##1}}}
+\expandafter\def\csname PY@tok@nn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@ch\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@sa\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@sh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@kp\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@vi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@kn\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gp\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kc\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@si\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.73,0.40,0.53}{##1}}}
+\expandafter\def\csname PY@tok@ow\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.67,0.13,1.00}{##1}}}
+\expandafter\def\csname PY@tok@mo\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@gd\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.63,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@m\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@sx\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@gr\endcsname{\def\PY@tc##1{\textcolor[rgb]{1.00,0.00,0.00}{##1}}}
+\expandafter\def\csname PY@tok@sd\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@s\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.13,0.13}{##1}}}
+\expandafter\def\csname PY@tok@cpf\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@nb\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@vg\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.10,0.09,0.49}{##1}}}
+\expandafter\def\csname PY@tok@o\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@k\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@mf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@err\endcsname{\def\PY@bc##1{\setlength{\fboxsep}{0pt}\fcolorbox[rgb]{1.00,0.00,0.00}{1,1,1}{\strut ##1}}}
+\expandafter\def\csname PY@tok@cs\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@kr\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.00,0.50,0.00}{##1}}}
+\expandafter\def\csname PY@tok@c1\endcsname{\let\PY@it=\textit\def\PY@tc##1{\textcolor[rgb]{0.25,0.50,0.50}{##1}}}
+\expandafter\def\csname PY@tok@mi\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+\expandafter\def\csname PY@tok@w\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.73,0.73,0.73}{##1}}}
+\expandafter\def\csname PY@tok@ne\endcsname{\let\PY@bf=\textbf\def\PY@tc##1{\textcolor[rgb]{0.82,0.25,0.23}{##1}}}
+\expandafter\def\csname PY@tok@nf\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.00,0.00,1.00}{##1}}}
+\expandafter\def\csname PY@tok@mh\endcsname{\def\PY@tc##1{\textcolor[rgb]{0.40,0.40,0.40}{##1}}}
+
+\def\PYZbs{\char`\\}
+\def\PYZus{\char`\_}
+\def\PYZob{\char`\{}
+\def\PYZcb{\char`\}}
+\def\PYZca{\char`\^}
+\def\PYZam{\char`\&}
+\def\PYZlt{\char`\<}
+\def\PYZgt{\char`\>}
+\def\PYZsh{\char`\#}
+\def\PYZpc{\char`\%}
+\def\PYZdl{\char`\$}
+\def\PYZhy{\char`\-}
+\def\PYZsq{\char`\'}
+\def\PYZdq{\char`\"}
+\def\PYZti{\char`\~}
+% for compatibility with earlier versions
+\def\PYZat{@}
+\def\PYZlb{[}
+\def\PYZrb{]}
+\makeatother
+
+
+    % Exact colors from NB
+    \definecolor{incolor}{rgb}{0.0, 0.0, 0.5}
+    \definecolor{outcolor}{rgb}{0.545, 0.0, 0.0}
+
+
+
+    
+    % Prevent overflowing lines due to hard-to-break entities
+    \sloppy 
+    % Setup hyperref package
+    \hypersetup{
+      breaklinks=true,  % so long urls are correctly broken across lines
+      colorlinks=true,
+      urlcolor=urlcolor,
+      linkcolor=linkcolor,
+      citecolor=citecolor,
+      }
+    % Slightly bigger margins than the latex defaults
+    
+    \geometry{verbose,tmargin=1in,bmargin=1in,lmargin=1in,rmargin=1in}
+    
+    
+
+    \begin{document}
+    
+    
+    \maketitle
+    
+    
+
+    
+    \section{Steps}\label{steps}
+
+\textbf{Read file and encoding} * Read the input file. * Select unique
+characters or classes from full text as vocub. * Encoding: Generate
+number for each classes or characters. * Replace all text with numbers
+using generated integers-character mapping.
+
+Section \ref{create_sequence} * Convert the encoded(number replaced
+text) text as sequences * Use the \texttt{batch\_size} and
+\texttt{number\_of\_steps} for mini batch * Create a total batch with
+mini batch, This will have K number of main batch
+
+Section \ref{tf_initialize} * Initialize or define \texttt{input},
+\texttt{output} and \texttt{keep\_prob} for RNN * Initialize or define
+Single cell LSTM * Initialize Multicell or Multilayer LSTM using a
+single * Initialize Output and State of LSTM.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}1}]:} \PY{k+kn}{import} \PY{n+nn}{time}
+        \PY{k+kn}{from} \PY{n+nn}{collections} \PY{k}{import} \PY{n}{namedtuple}
+        \PY{k+kn}{import} \PY{n+nn}{numpy} \PY{k}{as} \PY{n+nn}{np}
+        \PY{k+kn}{import} \PY{n+nn}{tensorflow} \PY{k}{as} \PY{n+nn}{tf}
+\end{Verbatim}
+
+
+    \section{Input Preparations}\label{input-preparations}
+
+    Read the file as text.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}2}]:} \PY{k}{with} \PY{n+nb}{open}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{anna.txt}\PY{l+s+s1}{\PYZsq{}}\PY{p}{,} \PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{r}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)} \PY{k}{as} \PY{n}{f}\PY{p}{:}
+            \PY{n}{text}\PY{o}{=}\PY{n}{f}\PY{o}{.}\PY{n}{read}\PY{p}{(}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{text}\PY{p}{[}\PY{l+m+mi}{100}\PY{p}{:}\PY{l+m+mi}{200}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+g was in confusion in the Oblonskys' house. The wife had
+discovered that the husband was carrying on
+
+    \end{Verbatim}
+
+    Create unique characters from total text as \textbf{vocabulary}. This
+helps to decide the \textbf{number of classes} or characters in a
+specific text.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}3}]:} \PY{n}{vocab} \PY{o}{=} \PY{n+nb}{sorted}\PY{p}{(}\PY{n+nb}{set}\PY{p}{(}\PY{n}{text}\PY{p}{)}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{vocab}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+['\textbackslash{}n', ' ', '!', '"', '\$', '\%', '\&', "'", '(', ')', '*', ',', '-', '.', '/', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ':', ';', '?', '@', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '\_', '`', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+    \end{Verbatim}
+
+    Map letters with numbers. Because our Network understand only the
+numbers not the characters
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}4}]:} \PY{n}{vocab\PYZus{}to\PYZus{}int} \PY{o}{=} \PY{p}{\PYZob{}}\PY{n}{c}\PY{p}{:} \PY{n}{i} \PY{k}{for} \PY{n}{i}\PY{p}{,} \PY{n}{c} \PY{o+ow}{in} \PY{n+nb}{enumerate}\PY{p}{(}\PY{n}{vocab}\PY{p}{)}\PY{p}{\PYZcb{}}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{vocab\PYZus{}to\PYZus{}int}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+\{'2': 17, '/': 14, 'Y': 53, '5': 20, '!': 2, 'c': 59, '\&': 6, 'e': 61, 'I': 37, 'O': 43, 'H': 36, 'Q': 45, 'h': 64, 'A': 29, 'b': 58, '(': 8, 'X': 52, 'J': 38, 'z': 82, 'v': 78, 'n': 70, ' ': 1, "'": 7, '3': 18, '"': 3, 'R': 46, '.': 13, '*': 10, '\textbackslash{}n': 0, '1': 16, '0': 15, 'T': 48, '8': 23, 'S': 47, 'r': 74, '7': 22, 'N': 42, 's': 75, ':': 25, 'Z': 54, 'M': 41, 'F': 34, '?': 27, '6': 21, 'x': 80, ')': 9, 'm': 69, 'G': 35, '`': 56, 'C': 31, 'd': 60, 'w': 79, 'W': 51, '4': 19, 'p': 72, 'i': 65, 'q': 73, 'f': 62, 'K': 39, 'E': 33, 'V': 50, 'y': 81, '9': 24, 'u': 77, 'D': 32, '\_': 55, 'U': 49, ',': 11, 'a': 57, '@': 28, 'l': 68, ';': 26, 'j': 66, '-': 12, 'k': 67, '\$': 4, '\%': 5, 't': 76, 'L': 40, 'B': 30, 'o': 71, 'P': 44, 'g': 63\}
+
+    \end{Verbatim}
+
+    Using the mapping convert all letters as numbers
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}5}]:} \PY{c+c1}{\PYZsh{} Map letter with numbers, Inverse of integer mapping}
+        \PY{n}{int\PYZus{}to\PYZus{}vocab} \PY{o}{=} \PY{n+nb}{dict}\PY{p}{(}\PY{n+nb}{enumerate}\PY{p}{(}\PY{n}{vocab}\PY{p}{)}\PY{p}{)}
+        
+        \PY{n}{encoded} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{array}\PY{p}{(}\PY{p}{[}\PY{n}{vocab\PYZus{}to\PYZus{}int}\PY{p}{[}\PY{n}{c}\PY{p}{]} \PY{k}{for} \PY{n}{c} \PY{o+ow}{in} \PY{n}{text}\PY{p}{]}\PY{p}{,} \PY{n}{dtype}\PY{o}{=}\PY{n}{np}\PY{o}{.}\PY{n}{int32}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{text}\PY{p}{[}\PY{l+m+mi}{100}\PY{p}{:}\PY{l+m+mi}{200}\PY{p}{]}\PY{p}{)}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{encoded}\PY{p}{[}\PY{l+m+mi}{100}\PY{p}{:}\PY{l+m+mi}{200}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+g was in confusion in the Oblonskys' house. The wife had
+discovered that the husband was carrying on
+[63  1 79 57 75  1 65 70  1 59 71 70 62 77 75 65 71 70  1 65 70  1 76 64 61
+  1 43 58 68 71 70 75 67 81 75  7  1 64 71 77 75 61 13  1 48 64 61  1 79 65
+ 62 61  1 64 57 60  0 60 65 75 59 71 78 61 74 61 60  1 76 64 57 76  1 76 64
+ 61  1 64 77 75 58 57 70 60  1 79 57 75  1 59 57 74 74 81 65 70 63  1 71 70]
+
+    \end{Verbatim}
+
+    \section{Convert inputs as batch sequences
+}\label{convert-inputs-as-batch-sequences}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}7}]:} \PY{n}{batch\PYZus{}size} \PY{o}{=} \PY{l+m+mi}{64}\PY{p}{;} \PY{n}{n\PYZus{}steps} \PY{o}{=} \PY{l+m+mi}{50}
+\end{Verbatim}
+
+
+    Collect Characters per Sequence or mini Batch
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}9}]:} \PY{n}{chars\PYZus{}per\PYZus{}batch} \PY{o}{=} \PY{n}{batch\PYZus{}size} \PY{o}{*} \PY{n}{n\PYZus{}steps}
+        \PY{n+nb}{print}\PY{p}{(}\PY{n}{chars\PYZus{}per\PYZus{}batch}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+3200
+
+    \end{Verbatim}
+
+    Total Number of Batches, Once we devide the total chars per mini batch,
+We able to get the Batch size
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}10}]:} \PY{n}{n\PYZus{}batchers} \PY{o}{=} \PY{n+nb}{len}\PY{p}{(}\PY{n}{encoded}\PY{p}{)}\PY{o}{/}\PY{o}{/}\PY{n}{chars\PYZus{}per\PYZus{}batch}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{n\PYZus{}batchers}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+620
+
+    \end{Verbatim}
+
+    Based on possible Batch size. Select charactors that can create
+\textbf{full mini batch}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}11}]:} \PY{n}{new\PYZus{}encoded} \PY{o}{=} \PY{n}{encoded}\PY{p}{[}\PY{p}{:} \PY{n}{chars\PYZus{}per\PYZus{}batch} \PY{o}{*} \PY{n}{n\PYZus{}batchers}\PY{p}{]}
+         \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{old\PYZus{}text\PYZus{}length: }\PY{l+s+si}{\PYZob{}\PYZcb{}}\PY{l+s+s1}{, new\PYZus{}text\PYZus{}length: }\PY{l+s+si}{\PYZob{}\PYZcb{}}\PY{l+s+s1}{\PYZsq{}}\PY{o}{.}\PY{n}{format}\PY{p}{(}\PY{n+nb}{len}\PY{p}{(}\PY{n}{encoded}\PY{p}{)}\PY{p}{,} \PY{n+nb}{len}\PY{p}{(}\PY{n}{new\PYZus{}encoded}\PY{p}{)}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+old\_text\_length: 1985223, new\_text\_length: 1984000
+
+    \end{Verbatim}
+
+    Reshape the batch according to mini batch size.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}12}]:} \PY{n}{new\PYZus{}encoded} \PY{o}{=} \PY{n}{new\PYZus{}encoded}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{p}{(}\PY{n}{batch\PYZus{}size}\PY{p}{,} \PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    Create mini batch with number of steps. In otherwords, How many steps we
+are going to look back to create RNN or LSTM.
+
+The \texttt{yield} function behave as \texttt{return}, Then reason we
+use \texttt{yeild} is, This won't keep the data in memory. When ever we
+need this will get executed and return the values.
+
+To create input and output, We move the output by 1 step. Where if the
+input in \(i^{th}\) position, Then the output will be \((i+1)^{th}\)
+position.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}13}]:} \PY{k}{def} \PY{n+nf}{get\PYZus{}batch}\PY{p}{(}\PY{n}{new\PYZus{}encoded}\PY{p}{,} \PY{n}{n\PYZus{}steps}\PY{p}{)}\PY{p}{:}
+             \PY{k}{for} \PY{n}{n} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{l+m+mi}{0}\PY{p}{,} \PY{n}{new\PYZus{}encoded}\PY{o}{.}\PY{n}{shape}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{,} \PY{n}{n\PYZus{}steps}\PY{p}{)}\PY{p}{:}
+                 \PY{n}{x} \PY{o}{=} \PY{n}{new\PYZus{}encoded}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{n}{n}\PY{p}{:} \PY{n}{n}\PY{o}{+} \PY{n}{n\PYZus{}steps}\PY{p}{]}
+                 \PY{n}{y\PYZus{}temp} \PY{o}{=} \PY{n}{new\PYZus{}encoded}\PY{p}{[}\PY{p}{:}\PY{p}{,} \PY{n}{n}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{:}\PY{n}{n}\PY{o}{+}\PY{n}{n\PYZus{}steps}\PY{o}{+}\PY{l+m+mi}{1}\PY{p}{]}
+                 \PY{n}{y} \PY{o}{=} \PY{n}{np}\PY{o}{.}\PY{n}{zeros}\PY{p}{(}\PY{n}{x}\PY{o}{.}\PY{n}{shape}\PY{p}{,} \PY{n}{dtype}\PY{o}{=}\PY{n}{x}\PY{o}{.}\PY{n}{dtype}\PY{p}{)}
+                 \PY{n}{y}\PY{p}{[}\PY{p}{:}\PY{p}{,}\PY{p}{:}\PY{n}{y\PYZus{}temp}\PY{o}{.}\PY{n}{shape}\PY{p}{[}\PY{l+m+mi}{1}\PY{p}{]}\PY{p}{]} \PY{o}{=} \PY{n}{y\PYZus{}temp}
+                 \PY{k}{yield} \PY{n}{x}\PY{p}{,} \PY{n}{y}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}14}]:} \PY{n}{batch} \PY{o}{=} \PY{n}{get\PYZus{}batch}\PY{p}{(}\PY{n}{new\PYZus{}encoded}\PY{p}{,} \PY{n}{n\PYZus{}steps}\PY{p}{)}
+\end{Verbatim}
+
+
+    Get each value from \texttt{generator} Object by using \texttt{next}
+function.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}15}]:} \PY{n}{x}\PY{p}{,} \PY{n}{y} \PY{o}{=} \PY{n+nb}{next}\PY{p}{(}\PY{n}{batch}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{x}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{y}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+[[31 64 57 {\ldots},  1 77 70]
+ [70  1 76 {\ldots}, 81  1 69]
+ [70 71 78 {\ldots}, 59 57 68]
+ {\ldots}, 
+ [70 60  1 {\ldots}, 78 61 74]
+ [11  0 71 {\ldots},  1 57 70]
+ [ 1 70 71 {\ldots}, 70 71 76]]
+[[64 57 72 {\ldots}, 77 70 64]
+ [ 1 76 71 {\ldots},  1 69 65]
+ [71 78 65 {\ldots}, 57 68  1]
+ {\ldots}, 
+ [60  1 75 {\ldots}, 61 74  1]
+ [ 0 71 74 {\ldots}, 57 70 81]
+ [70 71 79 {\ldots}, 71 76 64]]
+
+    \end{Verbatim}
+
+    \section{Creation of Tensorflow variables.
+}\label{creation-of-tensorflow-variables.}
+
+\subsection{Input Variables}\label{input-variables}
+
+Initialize \texttt{inputs}, \texttt{outputs} and \texttt{keep\_prob}
+probability in hidden units (hidden neurons in LSTM cell). The size of
+the input and output is \(batch\_size \times n\_step\). Because we are
+always going to provide the input as mini batch as well as tensors. Here
+\texttt{keep\_prob} is a scaler and 0 dimentional tensor
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}16}]:} \PY{n}{inputs} \PY{o}{=} \PY{n}{tf}\PY{o}{.}\PY{n}{placeholder}\PY{p}{(}\PY{n}{tf}\PY{o}{.}\PY{n}{int32}\PY{p}{,} \PY{n}{shape}\PY{o}{=}\PY{p}{[}\PY{n}{batch\PYZus{}size}\PY{p}{,} \PY{n}{n\PYZus{}steps}\PY{p}{]}\PY{p}{,} \PY{n}{name}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{inputs}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{targets} \PY{o}{=} \PY{n}{tf}\PY{o}{.}\PY{n}{placeholder}\PY{p}{(}\PY{n}{tf}\PY{o}{.}\PY{n}{int32}\PY{p}{,} \PY{n}{shape}\PY{o}{=}\PY{p}{[}\PY{n}{batch\PYZus{}size}\PY{p}{,} \PY{n}{n\PYZus{}steps}\PY{p}{]}\PY{p}{,} \PY{n}{name}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{targets}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n}{keep\PYZus{}prob} \PY{o}{=} \PY{n}{tf}\PY{o}{.}\PY{n}{placeholder}\PY{p}{(}\PY{n}{tf}\PY{o}{.}\PY{n}{float32}\PY{p}{,} \PY{n}{name}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{keep\PYZus{}prob}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}17}]:} \PY{n+nb}{print}\PY{p}{(}\PY{n}{inputs}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{targets}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{keep\PYZus{}prob}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Tensor("inputs:0", shape=(64, 50), dtype=int32)
+Tensor("targets:0", shape=(64, 50), dtype=int32)
+Tensor("keep\_prob:0", dtype=float32)
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}18}]:} \PY{n}{lstm\PYZus{}size} \PY{o}{=} \PY{l+m+mi}{128} \PY{c+c1}{\PYZsh{} Number of hidden units in LSTM cell}
+\end{Verbatim}
+
+
+    \begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  Create a single LSTM cell using
+  \texttt{tf.contrib.rnn.BasicLSTMCell(lstm\_size)}. From single cell we
+  can create a multi Layer LSTM cells using \texttt{MultiRNNCell}
+  Function.
+\item
+  We need to Initialize the cell states with zero. Here the state is the
+  value that pass to another state(from time \texttt{t} to time
+  \texttt{t+1}). When we create the states with cells. That will
+  automatically create for hidden LSTM cells as well. This helps to pass
+  the information to next state to remember things.
+\end{enumerate}
+
+We have 2 hidden layers or 2 LSTM cells. We have used a function to
+generate 2 LSTM cells dynamically. Initially I have tried this with by
+multiplying list with a value.
+\texttt{{[}cell{]}\ *\ number\_of\_layers}. Because If we multiply the
+same cell then we are just reusing it. But we need to create a new cell.
+Therefore this has given a error while creating a RNN Layer with
+\texttt{tf.nn.dynamic\_rnn}. Therefore created a function to generate
+each cell. Here we don't pass any data. We are just defineing the cells.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}19}]:} \PY{k}{def} \PY{n+nf}{create\PYZus{}single\PYZus{}cell}\PY{p}{(}\PY{n}{lstm\PYZus{}size}\PY{p}{,} \PY{n}{keep\PYZus{}prob}\PY{p}{)}\PY{p}{:}
+             \PY{n}{lstm} \PY{o}{=} \PY{n}{tf}\PY{o}{.}\PY{n}{contrib}\PY{o}{.}\PY{n}{rnn}\PY{o}{.}\PY{n}{BasicLSTMCell}\PY{p}{(}\PY{n}{lstm\PYZus{}size}\PY{p}{)}
+             \PY{n}{drop} \PY{o}{=} \PY{n}{tf}\PY{o}{.}\PY{n}{contrib}\PY{o}{.}\PY{n}{rnn}\PY{o}{.}\PY{n}{DropoutWrapper}\PY{p}{(}\PY{n}{lstm}\PY{p}{,} \PY{n}{output\PYZus{}keep\PYZus{}prob}\PY{o}{=}\PY{n}{keep\PYZus{}prob}\PY{p}{)}
+             \PY{k}{return} \PY{n}{drop}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}20}]:} \PY{n}{number\PYZus{}of\PYZus{}layers} \PY{o}{=} \PY{l+m+mi}{2}
+\end{Verbatim}
+
+
+    Stack the LSTM cell in to Mutliple layers
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}21}]:} \PY{n}{cells} \PY{o}{=} \PY{n}{tf}\PY{o}{.}\PY{n}{contrib}\PY{o}{.}\PY{n}{rnn}\PY{o}{.}\PY{n}{MultiRNNCell}\PY{p}{(}\PY{p}{[}\PY{n}{create\PYZus{}single\PYZus{}cell}\PY{p}{(}\PY{n}{lstm\PYZus{}size}\PY{p}{,} \PY{n}{keep\PYZus{}prob}\PY{p}{)} \PY{k}{for} \PY{n}{\PYZus{}} \PY{o+ow}{in} \PY{n+nb}{range}\PY{p}{(}\PY{n}{number\PYZus{}of\PYZus{}layers}\PY{p}{)}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+
+
+    Create initial state for each cell. The \texttt{cell.zero\_state}
+function will create initial values for states. Since initial input size
+at time t is \texttt{Number\ of\ sequence} or \texttt{batch\_size}. So
+each cell will be created with \texttt{batch\_size} of initial state.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}22}]:} \PY{n}{initial\PYZus{}state} \PY{o}{=} \PY{n}{cells}\PY{o}{.}\PY{n}{zero\PYZus{}state}\PY{p}{(}\PY{n}{batch\PYZus{}size}\PY{p}{,} \PY{n}{tf}\PY{o}{.}\PY{n}{float32}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}23}]:} \PY{n+nb}{print}\PY{p}{(}\PY{n}{cells}\PY{p}{)}
+         \PY{n}{initial\PYZus{}state}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<tensorflow.python.ops.rnn\_cell\_impl.MultiRNNCell object at 0x181bd2c438>
+
+    \end{Verbatim}
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}23}]:} (LSTMStateTuple(c=<tf.Tensor 'MultiRNNCellZeroState/DropoutWrapperZeroState/BasicLSTMCellZeroState/zeros:0' shape=(64, 128) dtype=float32>, h=<tf.Tensor 'MultiRNNCellZeroState/DropoutWrapperZeroState/BasicLSTMCellZeroState/zeros\_1:0' shape=(64, 128) dtype=float32>),
+          LSTMStateTuple(c=<tf.Tensor 'MultiRNNCellZeroState/DropoutWrapperZeroState\_1/BasicLSTMCellZeroState/zeros:0' shape=(64, 128) dtype=float32>, h=<tf.Tensor 'MultiRNNCellZeroState/DropoutWrapperZeroState\_1/BasicLSTMCellZeroState/zeros\_1:0' shape=(64, 128) dtype=float32>))
+\end{Verbatim}
+            
+    \section{Creation of RNN Network}\label{creation-of-rnn-network}
+
+    The class of \texttt{one\_hot} encoder is \texttt{vocub}: Unique
+characters from whole text. The number of classes helps to find the
+probability of each letter by creating \texttt{logits}, The logit is a
+vector for each character after applying softmax functions. Because when
+we are passing a single character we will pass a vector, where the
+specific character will marked as 1 amoung a vector of classes. And from
+RNN output the character comes with probability distribution from
+softmax function. This will be input for each LSTM cell as vector.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}24}]:} \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{Classes or charactors}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{vocab}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+Classes or charactors
+['\textbackslash{}n', ' ', '!', '"', '\$', '\%', '\&', "'", '(', ')', '*', ',', '-', '.', '/', '0', '1', '2', '3', '4', '5', '6', '7', '8', '9', ':', ';', '?', '@', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '\_', '`', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
+
+    \end{Verbatim}
+
+    Once we pass through \texttt{one\_hot}, It show a 3D result of input.
+Where * 64: \texttt{batch\_size} * 50:\texttt{number\_of\_steps} * 83:
+\texttt{classes}
+
+Because the \texttt{tf.one\_hot} converts the each character vector size
+of 83. We normally we call this process as one hot encoding.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}25}]:} \PY{n}{num\PYZus{}classes} \PY{o}{=} \PY{n+nb}{len}\PY{p}{(}\PY{n}{vocab}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{number of classes: }\PY{l+s+s1}{\PYZsq{}} \PY{o}{+} \PY{n+nb}{str}\PY{p}{(}\PY{n}{num\PYZus{}classes}\PY{p}{)}\PY{p}{)}
+         \PY{n}{x\PYZus{}one\PYZus{}hot} \PY{o}{=} \PY{n}{tf}\PY{o}{.}\PY{n}{one\PYZus{}hot}\PY{p}{(}\PY{n}{inputs}\PY{p}{,} \PY{n}{num\PYZus{}classes}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{x\PYZus{}one\PYZus{}hot}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+number of classes: 83
+Tensor("one\_hot:0", shape=(64, 50, 83), dtype=float32)
+
+    \end{Verbatim}
+
+    Create a RNN architecture by combining all initialized cell or LSTM
+Multilayer
+
+    \begin{itemize}
+\tightlist
+\item
+  \textbf{Output}: This is the actual output from LSTM cell.
+\item
+  \textbf{State}: This is a output from LSTM cell that pass to next time
+  step.
+\end{itemize}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}26}]:} \PY{n}{outputs}\PY{p}{,} \PY{n}{state} \PY{o}{=} \PY{n}{tf}\PY{o}{.}\PY{n}{nn}\PY{o}{.}\PY{n}{dynamic\PYZus{}rnn}\PY{p}{(}\PY{n}{cells}\PY{p}{,} \PY{n}{x\PYZus{}one\PYZus{}hot}\PY{p}{,} \PY{n}{initial\PYZus{}state}\PY{o}{=}\PY{n}{initial\PYZus{}state}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}27}]:} \PY{n}{final\PYZus{}state}\PY{o}{=} \PY{n}{state}
+\end{Verbatim}
+
+
+    Now we have create a RNN network with 2 hidden layer or 2 LSTM cells.
+And each character input has been encoded with One Hot Encoding.
+
+    \section{Reshape Output}\label{reshape-output}
+
+    We have \(N\) steps in mini match. - So we are going to get \(N\)
+outputs from our RNN.
+
+At the same time we are passing multiple sequence \(M\) in parallel. -
+So we get another set of output for each sequence. So the Total output
+will be \(M \times N\)
+
+LSTM also has \(L\) number of hidden units. - So the total output from
+LSTM is 3 dimentional. Which is \(M \times N \times L\)
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}28}]:} \PY{n}{outputs}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}28}]:} <tf.Tensor 'rnn/transpose:0' shape=(64, 50, 128) dtype=float32>
+\end{Verbatim}
+            
+    Actually we will get LSTM outputs as \texttt{list}. So the list need to
+concatenated to create an array.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}31}]:} \PY{n}{seq\PYZus{}output} \PY{o}{=} \PY{n}{tf}\PY{o}{.}\PY{n}{concat}\PY{p}{(}\PY{n}{outputs}\PY{p}{,} \PY{n}{axis}\PY{o}{=}\PY{l+m+mi}{1}\PY{p}{)}
+         \PY{n}{seq\PYZus{}output}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}31}]:} <tf.Tensor 'concat\_2:0' shape=(64, 50, 128) dtype=float32>
+\end{Verbatim}
+            
+    All the outputs from LSTM are going through the \textbf{same sigmoid}
+layer with the \textbf{same weights}. Therefore we can reshape this
+output from LSTM in to 2D tensor with the shape \((M * N) \times L\).
+That is, * Each row output for \textbf{each charactor}. Where the total
+charactors are \(M*N\). In other words \textbf{each row} is \textbf{one
+step} and \textbf{one sequence}. Or Every row is one output from one
+LSTM cell. * \(M*N\) rows with \(L\) columns, Where
+\(charactors\ per\ mini\ batch = M * N\)
+
+Then the array need to reshaped as we have discussed above. Where each
+row for each charactor with \(L\) number of columns.
+
+Actually this reshape will helps with Softmax function matrix
+multiplication
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}43}]:} \PY{n}{output\PYZus{}reshape} \PY{o}{=} \PY{n}{tf}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{n}{seq\PYZus{}output}\PY{p}{,} \PY{p}{[}\PY{o}{\PYZhy{}}\PY{l+m+mi}{1}\PY{p}{,} \PY{n}{lstm\PYZus{}size}\PY{p}{]}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}44}]:} \PY{n}{output\PYZus{}reshape}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}44}]:} <tf.Tensor 'Reshape:0' shape=(3200, 128) dtype=float32>
+\end{Verbatim}
+            
+    Once we have reshaped. Then we can create the weights and bias for the
+softmax layer. Then we will do the matrix multiplication and adding bias
+to get the logits. Then we will pass the logits through the softmax
+function.
+
+The weights and bias need to be created with
+\texttt{python\ tf.variable\_scope(\textquotesingle{}name\_for\_softmax\textquotesingle{})}.
+Because RNN cell also have weights and bias with the default. So If we
+define softmax weight and bias without \texttt{tf.variable\_scope}. Then
+this will take the default name as RNN. And that will throw an error. To
+avoid the error we pass a different name for the softmax function
+weights and the bias.
+
+    The shape of the weights will be Number of hidden units in a LSTM cell
+and the size of class/unique characters.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}45}]:} \PY{k}{with} \PY{n}{tf}\PY{o}{.}\PY{n}{variable\PYZus{}scope}\PY{p}{(}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{softmax\PYZus{}variables}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}\PY{p}{:}
+             \PY{n}{softmax\PYZus{}w} \PY{o}{=} \PY{n}{tf}\PY{o}{.}\PY{n}{Variable}\PY{p}{(}\PY{n}{tf}\PY{o}{.}\PY{n}{truncated\PYZus{}normal}\PY{p}{(}\PY{p}{(}\PY{n}{lstm\PYZus{}size}\PY{p}{,} \PY{n}{num\PYZus{}classes}\PY{p}{)}\PY{p}{,} \PY{n}{stddev}\PY{o}{=}\PY{l+m+mf}{0.1}\PY{p}{)}\PY{p}{)}
+             \PY{n}{softmax\PYZus{}b} \PY{o}{=} \PY{n}{tf}\PY{o}{.}\PY{n}{Variable}\PY{p}{(}\PY{n}{tf}\PY{o}{.}\PY{n}{zeros}\PY{p}{(}\PY{n}{num\PYZus{}classes}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}46}]:} \PY{n+nb}{print}\PY{p}{(}\PY{n}{softmax\PYZus{}w}\PY{p}{)}
+         \PY{n+nb}{print}\PY{p}{(}\PY{n}{softmax\PYZus{}b}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+<tf.Variable 'softmax\_variables\_1/Variable:0' shape=(128, 83) dtype=float32\_ref>
+<tf.Variable 'softmax\_variables\_1/Variable\_1:0' shape=(83,) dtype=float32\_ref>
+
+    \end{Verbatim}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}47}]:} \PY{n}{prediction} \PY{o}{=} \PY{n}{tf}\PY{o}{.}\PY{n}{matmul}\PY{p}{(}\PY{n}{output\PYZus{}reshape}\PY{p}{,} \PY{n}{softmax\PYZus{}w}\PY{p}{)} \PY{o}{+} \PY{n}{softmax\PYZus{}b}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}48}]:} \PY{n}{prediction}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}48}]:} <tf.Tensor 'add:0' shape=(3200, 83) dtype=float32>
+\end{Verbatim}
+            
+    Now we have logits for each charactor in mini batch.
+
+    Apply the softmax function for output logits from each LSTM
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}49}]:} \PY{n}{logits} \PY{o}{=} \PY{n}{tf}\PY{o}{.}\PY{n}{nn}\PY{o}{.}\PY{n}{softmax}\PY{p}{(}\PY{n}{prediction}\PY{p}{,} \PY{n}{name}\PY{o}{=}\PY{l+s+s1}{\PYZsq{}}\PY{l+s+s1}{predictions}\PY{l+s+s1}{\PYZsq{}}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}50}]:} \PY{n}{logits}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}50}]:} <tf.Tensor 'predictions:0' shape=(3200, 83) dtype=float32>
+\end{Verbatim}
+            
+    \section{Training loss}\label{training-loss}
+
+    Here we will be using \texttt{cross\ entrophy} loss to find the error
+loss. The tensorflow function support with
+\texttt{tf.nn.softmax\_cross\_entropy\_with\_logits} then find the mean
+to get the loss actual loss.
+
+The \textbf{targets need to be reshaped in to 2D tensor} as we have done
+with RNN outputs. Basically the logits and the targets need to be in the
+same shape. logits is the one that come throgh softmax function.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}51}]:} \PY{n}{targets}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}51}]:} <tf.Tensor 'targets:0' shape=(64, 50) dtype=int32>
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}52}]:} \PY{n}{y\PYZus{}one\PYZus{}hot} \PY{o}{=} \PY{n}{tf}\PY{o}{.}\PY{n}{one\PYZus{}hot}\PY{p}{(}\PY{n}{targets}\PY{p}{,} \PY{n}{num\PYZus{}classes}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}53}]:} \PY{n}{y\PYZus{}one\PYZus{}hot}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}53}]:} <tf.Tensor 'one\_hot\_2:0' shape=(64, 50, 83) dtype=float32>
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}54}]:} \PY{n}{y\PYZus{}out\PYZus{}reshape} \PY{o}{=} \PY{n}{tf}\PY{o}{.}\PY{n}{reshape}\PY{p}{(}\PY{n}{y\PYZus{}one\PYZus{}hot}\PY{p}{,} \PY{n}{logits}\PY{o}{.}\PY{n}{get\PYZus{}shape}\PY{p}{(}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}55}]:} \PY{n}{y\PYZus{}out\PYZus{}reshape}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}55}]:} <tf.Tensor 'Reshape\_1:0' shape=(3200, 83) dtype=float32>
+\end{Verbatim}
+            
+    Calculate the loss: Return a probability distribution for each
+character.
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}56}]:} \PY{n}{loss} \PY{o}{=} \PY{n}{tf}\PY{o}{.}\PY{n}{nn}\PY{o}{.}\PY{n}{softmax\PYZus{}cross\PYZus{}entropy\PYZus{}with\PYZus{}logits}\PY{p}{(}\PY{n}{logits}\PY{o}{=}\PY{n}{logits}\PY{p}{,} \PY{n}{labels}\PY{o}{=}\PY{n}{y\PYZus{}out\PYZus{}reshape}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}57}]:} \PY{n}{loss}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}57}]:} <tf.Tensor 'Reshape\_4:0' shape=(3200,) dtype=float32>
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}58}]:} \PY{n}{loss} \PY{o}{=} \PY{n}{tf}\PY{o}{.}\PY{n}{reduce\PYZus{}mean}\PY{p}{(}\PY{n}{loss}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}59}]:} \PY{n}{loss}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}59}]:} <tf.Tensor 'Mean:0' shape=() dtype=float32>
+\end{Verbatim}
+            
+    \section{Optimizer}\label{optimizer}
+
+    Here we build the optimizer. Normal RNNs has issues with gradients
+exploding and disappearing. LSTMs fix the disappearance problem, but the
+gradients can still grow without bound. To fix this, we can clip the
+gradients above some threshold. That is, if a gradient is larger than
+that threshold, we set it to the threshold. This will ensure the
+gradients never grow overly large. Then we use an AdamOptimizer for the
+learning step.
+
+    Map all the variables that we have assigned with this network. And this
+is handled by the Graph of RNN. To reset this mapping or graph we need
+to use \texttt{tf.reset\_default\_graph()}
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}60}]:} \PY{n}{grad\PYZus{}clip} \PY{o}{=} \PY{l+m+mi}{5}\PY{p}{;}
+         \PY{n}{learning\PYZus{}rate} \PY{o}{=} \PY{l+m+mf}{0.01}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}63}]:} \PY{c+c1}{\PYZsh{} Optimizer for training, using gradient clipping to control exploding gradients}
+         \PY{n}{tvars} \PY{o}{=} \PY{n}{tf}\PY{o}{.}\PY{n}{trainable\PYZus{}variables}\PY{p}{(}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}64}]:} \PY{n}{tvars}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}64}]:} [<tf.Variable 'rnn/multi\_rnn\_cell/cell\_0/basic\_lstm\_cell/kernel:0' shape=(211, 512) dtype=float32\_ref>,
+          <tf.Variable 'rnn/multi\_rnn\_cell/cell\_0/basic\_lstm\_cell/bias:0' shape=(512,) dtype=float32\_ref>,
+          <tf.Variable 'rnn/multi\_rnn\_cell/cell\_1/basic\_lstm\_cell/kernel:0' shape=(256, 512) dtype=float32\_ref>,
+          <tf.Variable 'rnn/multi\_rnn\_cell/cell\_1/basic\_lstm\_cell/bias:0' shape=(512,) dtype=float32\_ref>,
+          <tf.Variable 'softmax\_variables/Variable:0' shape=(128, 83) dtype=float32\_ref>,
+          <tf.Variable 'softmax\_variables/Variable\_1:0' shape=(83,) dtype=float32\_ref>,
+          <tf.Variable 'softmax\_variables\_1/Variable:0' shape=(128, 83) dtype=float32\_ref>,
+          <tf.Variable 'softmax\_variables\_1/Variable\_1:0' shape=(83,) dtype=float32\_ref>]
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}48}]:} \PY{n}{grads}\PY{p}{,} \PY{n}{\PYZus{}} \PY{o}{=} \PY{n}{tf}\PY{o}{.}\PY{n}{clip\PYZus{}by\PYZus{}global\PYZus{}norm}\PY{p}{(}\PY{n}{tf}\PY{o}{.}\PY{n}{gradients}\PY{p}{(}\PY{n}{loss}\PY{p}{,} \PY{n}{tvars}\PY{p}{)}\PY{p}{,} \PY{n}{grad\PYZus{}clip}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}49}]:} \PY{n}{grads}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}49}]:} [<tf.Tensor 'clip\_by\_global\_norm/clip\_by\_global\_norm/\_0:0' shape=(211, 512) dtype=float32>,
+          <tf.Tensor 'clip\_by\_global\_norm/clip\_by\_global\_norm/\_1:0' shape=(512,) dtype=float32>,
+          <tf.Tensor 'clip\_by\_global\_norm/clip\_by\_global\_norm/\_2:0' shape=(256, 512) dtype=float32>,
+          <tf.Tensor 'clip\_by\_global\_norm/clip\_by\_global\_norm/\_3:0' shape=(512,) dtype=float32>,
+          <tf.Tensor 'clip\_by\_global\_norm/clip\_by\_global\_norm/\_4:0' shape=(128, 83) dtype=float32>,
+          <tf.Tensor 'clip\_by\_global\_norm/clip\_by\_global\_norm/\_5:0' shape=(83,) dtype=float32>]
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}50}]:} \PY{n}{train\PYZus{}op} \PY{o}{=} \PY{n}{tf}\PY{o}{.}\PY{n}{train}\PY{o}{.}\PY{n}{AdamOptimizer}\PY{p}{(}\PY{n}{learning\PYZus{}rate}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}51}]:} \PY{n}{train\PYZus{}op}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}51}]:} <tensorflow.python.training.adam.AdamOptimizer at 0x1a1e1c2358>
+\end{Verbatim}
+            
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}52}]:} \PY{n}{optimizer} \PY{o}{=} \PY{n}{train\PYZus{}op}\PY{o}{.}\PY{n}{apply\PYZus{}gradients}\PY{p}{(}\PY{n+nb}{zip}\PY{p}{(}\PY{n}{grads}\PY{p}{,} \PY{n}{tvars}\PY{p}{)}\PY{p}{)}
+\end{Verbatim}
+
+
+    \begin{Verbatim}[commandchars=\\\{\}]
+{\color{incolor}In [{\color{incolor}53}]:} \PY{n}{optimizer}
+\end{Verbatim}
+
+
+\begin{Verbatim}[commandchars=\\\{\}]
+{\color{outcolor}Out[{\color{outcolor}53}]:} <tf.Operation 'Adam' type=NoOp>
+\end{Verbatim}
+            
+    \section{Build the network}\label{build-the-network}
+
+    To actually run data through the LSTM cells, we will use
+\href{https://www.tensorflow.org/versions/r1.0/api_docs/python/tf/nn/dynamic_rnn}{\texttt{tf.nn.dynamic\_rnn}}.
+This function will pass the hidden and cell states across LSTM cells
+appropriately for us. It returns the outputs for each LSTM cell at each
+step for each sequence in the mini-batch. It also gives us the final
+LSTM state. We want to save this state as \texttt{final\_state} so we
+can pass it to the first LSTM cell in the the next mini-batch run. For
+\texttt{tf.nn.dynamic\_rnn}, we pass in the cell and initial state we
+get from \texttt{build\_lstm}, as well as our input sequences. Also, we
+need to one-hot encode the inputs before going into the RNN.
+
+
+    % Add a bibliography block to the postdoc
+    
+    
+    
+    \end{document}
