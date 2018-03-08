@@ -1,0 +1,460 @@
+[I 21:29:50.013 NotebookApp] [nb_conda_kernels] enabled, 4 kernels found
+[I 21:29:50.388 NotebookApp] [jupyter_nbextensions_configurator] enabled 0.4.0
+[I 21:29:50.413 NotebookApp] [nb_anacondacloud] enabled
+[I 21:29:50.418 NotebookApp] [nb_conda] enabled
+[I 21:29:50.477 NotebookApp] ✓ nbpresent HTML export ENABLED
+[W 21:29:50.477 NotebookApp] ✗ nbpresent PDF export DISABLED: No module named 'nbbrowserpdf'
+[I 21:29:50.485 NotebookApp] Serving notebooks from local directory: /Users/dhanushanthp/Documents/NanoDegreeProjects/DeepLearning/deep_learning_notes_from_examples
+[I 21:29:50.485 NotebookApp] 0 active kernels 
+[I 21:29:50.485 NotebookApp] The Jupyter Notebook is running at: http://localhost:8888/?token=bfb00fc553bc5f7932c71e1d6e4e8296e48eadebd85db036
+[I 21:29:50.485 NotebookApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 21:29:50.487 NotebookApp] 
+    
+    Copy/paste this URL into your browser when you connect for the first time,
+    to login with a token:
+        http://localhost:8888/?token=bfb00fc553bc5f7932c71e1d6e4e8296e48eadebd85db036
+[I 21:29:50.605 NotebookApp] Accepting one-time-token-authenticated connection from ::1
+[W 21:33:03.870 NotebookApp] 404 GET /nbextensions/nbpresent/css/nbpresent.min.css (::1) 12.18ms referer=http://localhost:8888/notebooks/GAN/gan_mnist/Generative%20Adversarial%20Network.ipynb
+[I 21:33:04.982 NotebookApp] Kernel started: 3972436a-a9a8-4160-9df1-56ea44393f65
+[I 21:33:04.987 NotebookApp] 302 GET /notebooks/GAN/gan_mnist/assets/leakly_relu.png (::1) 2.12ms
+[I 21:33:04.989 NotebookApp] 302 GET /notebooks/GAN/gan_mnist/assets/gan_network.png (::1) 1.32ms
+[I 21:33:04.991 NotebookApp] 302 GET /notebooks/GAN/gan_mnist/assets/gan_diagram.png (::1) 1.17ms
+[W 23:55:01.472 NotebookApp] 404 GET /nbextensions/nbpresent/css/nbpresent.min.css (::1) 2.38ms referer=http://localhost:8888/notebooks/RNN/Word2Vector/Skip-Gram_word2vec.ipynb
+[I 23:55:02.737 NotebookApp] Kernel started: 85194cd1-9de7-4a3e-8d71-d305add891ab
+[I 23:55:02.742 NotebookApp] 302 GET /notebooks/RNN/Word2Vector/assets/skip_gram_net_arch.png (::1) 2.35ms
+[I 23:56:21.897 NotebookApp] Kernel shutdown: 85194cd1-9de7-4a3e-8d71-d305add891ab
+[W 00:00:13.913 NotebookApp] Notebook Projects/first_neural_network/Your_first_neural_network.ipynb is not trusted
+[W 00:00:13.984 NotebookApp] 404 GET /nbextensions/nbpresent/css/nbpresent.min.css (::1) 3.00ms referer=http://localhost:8888/notebooks/Projects/first_neural_network/Your_first_neural_network.ipynb
+[I 00:00:14.867 NotebookApp] Kernel started: 324b4b1f-8d32-42e0-938d-ba39cca3dfcc
+[W 00:00:14.873 NotebookApp] 404 GET /notebooks/Projects/first_neural_network/assets/neural_network.png (::1): No such file or directory: Projects/first_neural_network/assets/neural_network.png
+[W 00:00:14.875 NotebookApp] 404 GET /notebooks/Projects/first_neural_network/assets/neural_network.png (::1) 2.60ms referer=http://localhost:8888/notebooks/Projects/first_neural_network/Your_first_neural_network.ipynb
+[I 00:01:49.106 NotebookApp] Kernel shutdown: 324b4b1f-8d32-42e0-938d-ba39cca3dfcc
+[I 01:01:07.137 NotebookApp] Saving file at /GAN/gan_mnist/Generative Adversarial Network.ipynb
+[I 01:03:07.699 NotebookApp] Saving file at /GAN/gan_mnist/Generative Adversarial Network.ipynb
+[I 01:05:26.231 NotebookApp] Creating new directory in 
+[I 01:05:42.367 NotebookApp] Creating new notebook in /Test
+[I 01:05:43.224 NotebookApp] Kernel started: 619182e2-4054-45da-a281-fa86c43a7d03
+[W 01:05:43.296 NotebookApp] 404 GET /nbextensions/nbpresent/css/nbpresent.min.css (::1) 3.07ms referer=http://localhost:8888/notebooks/Test/Untitled.ipynb?kernel_name=conda-env-dlnd-py
+[I 01:07:43.227 NotebookApp] Saving file at /Test/Untitled.ipynb
+[I 01:09:07.120 NotebookApp] Saving file at /GAN/gan_mnist/Generative Adversarial Network.ipynb
+[I 01:09:43.685 NotebookApp] Saving file at /Test/Untitled.ipynb
+[I 01:10:09.715 NotebookApp] Saving file at /GAN/gan_mnist/Generative Adversarial Network.ipynb
+[I 09:18:39.959 NotebookApp] Saving file at /GAN/gan_mnist/Generative Adversarial Network.ipynb
+[I 09:20:10.470 NotebookApp] Saving file at /GAN/gan_mnist/Generative Adversarial Network.ipynb
+[I 09:42:00.362 NotebookApp] Saving file at /GAN/gan_mnist/Generative Adversarial Network.ipynb
+[I 09:48:02.485 NotebookApp] Saving file at /GAN/gan_mnist/Generative Adversarial Network.ipynb
+[I 09:52:12.714 NotebookApp] Saving file at /GAN/gan_mnist/Generative Adversarial Network.ipynb
+[I 09:58:48.855 NotebookApp] Saving file at /GAN/gan_mnist/Generative Adversarial Network.ipynb
+[I 09:59:06.206 NotebookApp] Kernel shutdown: 619182e2-4054-45da-a281-fa86c43a7d03
+[I 20:57:54.237 NotebookApp] Saving file at /GAN/gan_mnist/Generative Adversarial Network.ipynb
+[I 21:04:39.858 NotebookApp] Saving file at /GAN/gan_mnist/Generative Adversarial Network.ipynb
+[I 21:06:00.851 NotebookApp] Saving file at /GAN/gan_mnist/Generative Adversarial Network.ipynb
+[I 21:06:35.936 NotebookApp] Saving file at /GAN/gan_mnist/Generative Adversarial Network.ipynb
+[I 21:08:00.851 NotebookApp] Saving file at /GAN/gan_mnist/Generative Adversarial Network.ipynb
+[I 21:10:00.847 NotebookApp] Saving file at /GAN/gan_mnist/Generative Adversarial Network.ipynb
+[I 21:10:20.740 NotebookApp] Saving file at /GAN/gan_mnist/Generative Adversarial Network.ipynb
+[I 21:11:45.501 NotebookApp] Saving file at /GAN/gan_mnist/Generative Adversarial Network.ipynb
+[I 21:13:49.488 NotebookApp] Saving file at /GAN/gan_mnist/Generative Adversarial Network.ipynb
+[I 21:23:46.491 NotebookApp] Saving file at /GAN/gan_mnist/Generative Adversarial Network.ipynb
+[I 21:49:38.264 NotebookApp] Saving file at /GAN/gan_mnist/Generative Adversarial Network.ipynb
+[I 21:49:40.030 NotebookApp] Saving file at /GAN/gan_mnist/Generative Adversarial Network.ipynb
+[I 21:49:40.228 NotebookApp] Saving file at /GAN/gan_mnist/Generative Adversarial Network.ipynb
+[I 21:49:40.424 NotebookApp] Saving file at /GAN/gan_mnist/Generative Adversarial Network.ipynb
+[I 21:49:47.443 NotebookApp] Saving file at /GAN/gan_mnist/Generative Adversarial Network.ipynb
+[I 21:49:51.661 NotebookApp] Kernel shutdown: 3972436a-a9a8-4160-9df1-56ea44393f65
+[W 21:50:03.377 NotebookApp] Notebook GAN/dcgan-svhn/DCGAN_Exercises.ipynb is not trusted
+[I 21:50:04.226 NotebookApp] Kernel started: a4aee6e4-a316-480e-81c0-a4933db1b5ef
+[I 21:50:04.232 NotebookApp] 302 GET /notebooks/GAN/dcgan-svhn/assets/dcgan.png (::1) 1.39ms
+[I 21:50:04.235 NotebookApp] 302 GET /notebooks/GAN/dcgan-svhn/assets/SVHN_examples.png (::1) 1.82ms
+[W 21:50:04.309 NotebookApp] 404 GET /nbextensions/nbpresent/css/nbpresent.min.css (::1) 2.66ms referer=http://localhost:8888/notebooks/GAN/dcgan-svhn/DCGAN_Exercises.ipynb
+[W 21:50:10.573 NotebookApp] Notebook GAN/dcgan-svhn/DCGAN.ipynb is not trusted
+[W 21:50:10.646 NotebookApp] 404 GET /nbextensions/nbpresent/css/nbpresent.min.css (::1) 2.26ms referer=http://localhost:8888/notebooks/GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:50:11.559 NotebookApp] Kernel started: 0ba9ea31-92f7-478f-96ab-3a3ec3e54fca
+[I 21:50:11.565 NotebookApp] 302 GET /notebooks/GAN/dcgan-svhn/assets/SVHN_examples.png (::1) 2.80ms
+[I 21:50:11.567 NotebookApp] 302 GET /notebooks/GAN/dcgan-svhn/assets/dcgan.png (::1) 1.52ms
+[I 21:51:16.717 NotebookApp] Kernel shutdown: 0ba9ea31-92f7-478f-96ab-3a3ec3e54fca
+[I 21:52:06.366 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN_Exercises.ipynb
+[I 23:17:56.429 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN_Exercises.ipynb
+[I 23:18:12.916 NotebookApp] Kernel started: 3e895f06-a682-45e3-8bc0-e66786d2fa5a
+[W 23:18:13.014 NotebookApp] 404 GET /nbextensions/nbpresent/css/nbpresent.min.css (::1) 2.46ms referer=http://localhost:8888/notebooks/Test/Untitled.ipynb
+[I 23:19:56.834 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN_Exercises.ipynb
+[I 23:20:13.830 NotebookApp] Saving file at /Test/Untitled.ipynb
+[I 23:21:56.435 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN_Exercises.ipynb
+[I 23:57:56.775 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN_Exercises.ipynb
+[I 00:03:27.764 NotebookApp] Kernel shutdown: 3e895f06-a682-45e3-8bc0-e66786d2fa5a
+[I 00:03:56.373 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN_Exercises.ipynb
+[I 00:05:56.367 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN_Exercises.ipynb
+[I 00:07:56.365 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN_Exercises.ipynb
+[I 00:08:40.151 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN_Exercises.ipynb
+[W 00:08:59.404 NotebookApp] Notebook GAN/dcgan-svhn/DCGAN.ipynb is not trusted
+[W 00:08:59.483 NotebookApp] 404 GET /nbextensions/nbpresent/css/nbpresent.min.css (::1) 3.20ms referer=http://localhost:8888/notebooks/GAN/dcgan-svhn/DCGAN.ipynb
+[I 00:09:00.419 NotebookApp] Kernel started: a8abb689-466b-407e-a5dc-b09979af9617
+[I 00:09:00.425 NotebookApp] 302 GET /notebooks/GAN/dcgan-svhn/assets/dcgan.png (::1) 3.14ms
+[I 00:09:00.428 NotebookApp] 302 GET /notebooks/GAN/dcgan-svhn/assets/SVHN_examples.png (::1) 1.82ms
+[I 00:09:25.013 NotebookApp] Kernel shutdown: a8abb689-466b-407e-a5dc-b09979af9617
+[I 00:09:30.874 NotebookApp] Kernel shutdown: a4aee6e4-a316-480e-81c0-a4933db1b5ef
+[W 00:09:39.564 NotebookApp] Notebook GAN/batch-norm/Batch_Normalization_Lesson.ipynb is not trusted
+[W 00:09:39.679 NotebookApp] 404 GET /nbextensions/nbpresent/css/nbpresent.min.css (::1) 1.84ms referer=http://localhost:8888/notebooks/GAN/batch-norm/Batch_Normalization_Lesson.ipynb
+[I 00:09:41.997 NotebookApp] Kernel started: 181ca81d-fca0-4f52-ab4b-6ec34adf3116
+[I 00:11:42.787 NotebookApp] Saving file at /GAN/batch-norm/Batch_Normalization_Lesson.ipynb
+[W 00:11:42.790 NotebookApp] Saving untrusted notebook GAN/batch-norm/Batch_Normalization_Lesson.ipynb
+[I 00:17:42.029 NotebookApp] Saving file at /GAN/batch-norm/Batch_Normalization_Lesson.ipynb
+[W 00:17:42.031 NotebookApp] Saving untrusted notebook GAN/batch-norm/Batch_Normalization_Lesson.ipynb
+[I 10:00:04.649 NotebookApp] Saving file at /GAN/batch-norm/Batch_Normalization_Lesson.ipynb
+[W 10:00:04.654 NotebookApp] Saving untrusted notebook GAN/batch-norm/Batch_Normalization_Lesson.ipynb
+[I 15:43:46.599 NotebookApp] Kernel shutdown: 181ca81d-fca0-4f52-ab4b-6ec34adf3116
+[I 15:43:56.374 NotebookApp] Kernel started: 3e485390-0698-4162-92cf-8b4006fcecfd
+[I 15:43:56.380 NotebookApp] 302 GET /notebooks/GAN/dcgan-svhn/assets/SVHN_examples.png (::1) 2.56ms
+[I 15:43:56.381 NotebookApp] 302 GET /notebooks/GAN/dcgan-svhn/assets/dcgan.png (::1) 1.45ms
+[W 15:43:56.436 NotebookApp] 404 GET /nbextensions/nbpresent/css/nbpresent.min.css (::1) 3.20ms referer=http://localhost:8888/notebooks/GAN/dcgan-svhn/DCGAN_Exercises.ipynb
+[I 15:44:05.074 NotebookApp] Kernel shutdown: 3e485390-0698-4162-92cf-8b4006fcecfd
+[W 15:44:06.467 NotebookApp] Notebook GAN/dcgan-svhn/DCGAN.ipynb is not trusted
+[W 15:44:06.550 NotebookApp] 404 GET /nbextensions/nbpresent/css/nbpresent.min.css (::1) 2.70ms referer=http://localhost:8888/notebooks/GAN/dcgan-svhn/DCGAN.ipynb
+[I 15:44:07.506 NotebookApp] Kernel started: d9242091-99e4-4d9d-a097-c9f2c1c00e31
+[I 15:44:07.511 NotebookApp] 302 GET /notebooks/GAN/dcgan-svhn/assets/SVHN_examples.png (::1) 2.15ms
+[I 15:44:07.513 NotebookApp] 302 GET /notebooks/GAN/dcgan-svhn/assets/dcgan.png (::1) 1.13ms
+[I 15:46:07.539 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 15:46:07.540 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:08:26.580 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:08:26.581 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:18:26.603 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:18:26.604 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:24:26.235 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:24:26.235 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:26:26.234 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:26:26.234 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:36:26.223 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:36:26.224 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:38:26.214 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:38:26.215 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:40:26.219 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:40:26.220 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:42:26.220 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:42:26.221 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 22:04:26.214 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 22:04:26.215 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 22:05:13.001 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 22:05:13.001 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 22:05:13.196 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 22:05:13.197 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 22:14:18.078 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 22:14:18.079 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 22:24:26.171 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 22:24:26.173 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 22:26:26.170 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 22:26:26.171 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 22:30:26.162 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 22:30:26.163 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 07:46:08.151 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 07:46:08.154 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 08:50:28.435 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 08:50:28.437 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 20:11:58.146 NotebookApp] 302 GET / (::1) 0.56ms
+[W 20:12:05.505 NotebookApp] Notebook GAN/dcgan-svhn/DCGAN.ipynb is not trusted
+[W 20:12:05.586 NotebookApp] 404 GET /nbextensions/nbpresent/css/nbpresent.min.css (::1) 2.30ms referer=http://localhost:8888/notebooks/GAN/dcgan-svhn/DCGAN.ipynb
+[I 20:12:06.671 NotebookApp] 302 GET /notebooks/GAN/dcgan-svhn/assets/SVHN_examples.png (::1) 1.32ms
+[I 20:12:06.674 NotebookApp] 302 GET /notebooks/GAN/dcgan-svhn/assets/dcgan.png (::1) 1.48ms
+[I 21:07:27.567 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:07:27.570 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:09:27.556 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:09:27.557 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:09:42.916 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:09:42.917 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:11:28.347 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:11:28.348 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:15:27.553 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:15:27.554 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:15:42.428 NotebookApp] 302 GET /notebooks/GAN/dcgan-svhn/assets/dcgan.png (::1) 1.19ms
+[I 21:17:28.229 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:17:28.230 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:19:31.807 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:19:31.808 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:22:42.673 NotebookApp] Kernel started: daf89861-39b4-4063-9572-ab3a951c9ca7
+[W 21:22:42.749 NotebookApp] 404 GET /nbextensions/nbpresent/css/nbpresent.min.css (::1) 2.69ms referer=http://localhost:8888/notebooks/Test/Untitled.ipynb
+[I 21:23:27.799 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:23:27.800 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:24:42.677 NotebookApp] Saving file at /Test/Untitled.ipynb
+[I 21:26:11.868 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:26:11.869 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:26:12.008 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:26:12.009 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:26:12.162 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:26:12.162 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:26:42.774 NotebookApp] Saving file at /Test/Untitled.ipynb
+[I 21:31:54.007 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:31:54.008 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:31:54.240 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:31:54.242 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:31:54.440 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:31:54.441 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:33:59.415 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:33:59.416 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:34:06.589 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:34:06.590 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:34:06.979 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:34:06.980 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:37:27.527 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:37:27.528 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:37:28.944 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:37:28.945 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:37:29.162 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:37:29.163 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:45:35.335 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:45:35.336 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:45:35.530 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:45:35.531 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:59:25.948 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:59:25.949 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:59:26.157 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:59:26.158 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 22:30:28.158 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 22:30:28.161 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 22:32:27.912 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 22:32:27.913 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 22:34:42.838 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 22:34:42.839 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 22:34:50.370 NotebookApp] Kernel shutdown: daf89861-39b4-4063-9572-ab3a951c9ca7
+[W 22:35:00.980 NotebookApp] Notebook Projects/face_generation/dlnd_face_generation.ipynb is not trusted
+[I 22:35:01.727 NotebookApp] Kernel started: 7f4c8c6c-6973-4237-acb4-73364d202246
+[W 22:35:01.816 NotebookApp] 404 GET /nbextensions/nbpresent/css/nbpresent.min.css (::1) 2.34ms referer=http://localhost:8888/notebooks/Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:37:01.732 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:39:01.735 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:41:02.134 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:43:02.130 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+2018-03-06 22:44:01.102388: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2018-03-06 22:44:01.102468: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-03-06 22:44:01.102503: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+[I 22:44:31.902 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:45:01.735 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:45:48.325 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:46:46.053 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 22:46:46.054 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 22:46:57.779 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 22:46:57.780 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 22:46:58.004 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 22:46:58.005 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 22:46:58.158 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 22:46:58.159 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 22:46:58.348 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 22:46:58.348 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 22:47:01.385 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 22:47:01.386 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 22:47:02.128 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:51:01.724 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:55:11.813 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 22:55:11.814 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 22:55:14.427 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 05:35:22.386 NotebookApp] 302 GET / (::1) 0.45ms
+[W 05:35:29.950 NotebookApp] Notebook GAN/dcgan-svhn/DCGAN.ipynb is not trusted
+[W 05:35:30.036 NotebookApp] 404 GET /nbextensions/nbpresent/css/nbpresent.min.css (::1) 2.81ms referer=http://localhost:8888/notebooks/GAN/dcgan-svhn/DCGAN.ipynb
+[I 05:35:31.117 NotebookApp] 302 GET /notebooks/GAN/dcgan-svhn/assets/SVHN_examples.png (::1) 1.45ms
+[I 05:35:31.119 NotebookApp] 302 GET /notebooks/GAN/dcgan-svhn/assets/dcgan.png (::1) 1.25ms
+[W 05:35:32.283 NotebookApp] 404 GET /nbextensions/nbpresent/css/nbpresent.min.css (::1) 2.86ms referer=http://localhost:8888/notebooks/Projects/face_generation/dlnd_face_generation.ipynb
+[I 05:43:31.149 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 05:43:31.150 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 05:53:33.055 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 05:55:33.049 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 05:57:33.046 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 05:59:33.044 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 06:01:33.043 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 06:02:23.032 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 06:02:23.455 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 06:03:33.044 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 06:05:34.450 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 06:11:33.034 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 06:13:33.456 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 06:15:33.025 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 06:17:33.426 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 06:31:37.633 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 06:33:13.454 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 06:33:33.009 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 06:59:32.980 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 07:01:33.309 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 07:29:31.220 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 07:31:31.216 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 07:33:31.215 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 07:35:31.207 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 07:36:33.805 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 07:45:31.201 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 07:47:31.201 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 07:51:31.195 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 07:54:13.031 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 07:56:18.797 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:03:59.656 NotebookApp] 302 GET / (::1) 0.49ms
+[W 21:04:04.172 NotebookApp] Notebook GAN/dcgan-svhn/DCGAN.ipynb is not trusted
+[W 21:04:04.256 NotebookApp] 404 GET /nbextensions/nbpresent/css/nbpresent.min.css (::1) 2.37ms referer=http://localhost:8888/notebooks/GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:04:05.367 NotebookApp] 302 GET /notebooks/GAN/dcgan-svhn/assets/SVHN_examples.png (::1) 1.29ms
+[I 21:04:05.368 NotebookApp] 302 GET /notebooks/GAN/dcgan-svhn/assets/dcgan.png (::1) 1.00ms
+[W 21:04:06.568 NotebookApp] 404 GET /nbextensions/nbpresent/css/nbpresent.min.css (::1) 2.26ms referer=http://localhost:8888/notebooks/Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:14:07.792 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:50:02.709 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:51:41.560 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:12:51.530 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:13:44.134 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:15:44.131 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:16:14.892 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:17:44.131 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:17:49.763 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:18:01.348 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:18:13.547 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:18:14.787 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:19:44.125 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:20:09.186 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:20:09.642 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:21:44.125 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:23:44.124 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:24:05.886 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:29:44.117 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:30:26.306 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:31:44.106 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:32:03.597 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:33:44.113 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:34:06.326 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:35:11.242 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:37:44.424 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 06:10:03.281 NotebookApp] 302 GET / (::1) 0.49ms
+[W 06:10:10.304 NotebookApp] Notebook GAN/dcgan-svhn/DCGAN.ipynb is not trusted
+[I 06:10:11.522 NotebookApp] 302 GET /notebooks/GAN/dcgan-svhn/assets/SVHN_examples.png (::1) 1.38ms
+[I 06:10:11.524 NotebookApp] 302 GET /notebooks/GAN/dcgan-svhn/assets/dcgan.png (::1) 1.10ms
+[W 06:10:11.652 NotebookApp] 404 GET /nbextensions/nbpresent/css/nbpresent.min.css (::1) 2.34ms referer=http://localhost:8888/notebooks/GAN/dcgan-svhn/DCGAN.ipynb
+[W 06:10:12.481 NotebookApp] 404 GET /nbextensions/nbpresent/css/nbpresent.min.css (::1) 5.26ms referer=http://localhost:8888/notebooks/Projects/face_generation/dlnd_face_generation.ipynb
+[I 06:40:15.215 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 06:52:15.811 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 06:58:20.525 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 06:58:20.526 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 18:37:29.592 NotebookApp] 302 GET / (::1) 0.48ms
+[W 18:46:56.636 NotebookApp] Notebook GAN/dcgan-svhn/DCGAN.ipynb is not trusted
+[W 18:46:56.697 NotebookApp] 404 GET /nbextensions/nbpresent/css/nbpresent.min.css (::1) 2.86ms referer=http://localhost:8888/notebooks/GAN/dcgan-svhn/DCGAN.ipynb
+[I 18:46:57.793 NotebookApp] 302 GET /notebooks/GAN/dcgan-svhn/assets/SVHN_examples.png (::1) 1.45ms
+[I 18:46:57.794 NotebookApp] 302 GET /notebooks/GAN/dcgan-svhn/assets/dcgan.png (::1) 1.08ms
+[W 18:46:58.748 NotebookApp] 404 GET /nbextensions/nbpresent/css/nbpresent.min.css (::1) 2.33ms referer=http://localhost:8888/notebooks/Projects/face_generation/dlnd_face_generation.ipynb
+[I 19:00:23.035 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 19:00:23.036 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 19:02:57.817 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 19:02:57.818 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 19:04:57.791 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 19:04:57.792 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 19:07:02.157 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 19:07:02.158 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 19:18:59.713 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 19:20:21.731 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 19:20:21.732 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 19:20:22.028 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 19:20:22.029 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 19:20:22.241 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 19:20:22.242 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 19:20:25.026 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 19:20:25.027 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 19:21:30.782 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 19:22:59.652 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 19:23:09.659 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 19:23:26.482 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 19:23:46.966 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 19:23:47.298 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 19:23:47.480 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 19:23:55.690 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 19:24:42.866 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 19:24:46.085 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 19:32:57.770 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 19:32:57.771 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 19:36:59.748 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 19:37:51.040 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 19:37:51.041 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 19:37:53.594 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 19:37:53.595 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 19:38:09.426 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 19:38:59.636 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 19:40:59.637 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 19:42:59.627 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 19:44:59.758 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 19:46:57.751 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 19:46:57.751 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 19:48:59.622 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 19:50:59.622 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 19:51:11.297 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 19:52:59.618 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 20:54:46.419 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 20:54:46.422 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:02:01.709 NotebookApp] 302 GET /notebooks/GAN/dcgan-svhn/assets/SVHN_examples.png (::1) 1.16ms
+[I 21:02:46.407 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:02:46.408 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:02:54.308 NotebookApp] 302 GET /notebooks/GAN/dcgan-svhn/assets/dcgan.png (::1) 1.18ms
+[I 21:04:47.348 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:04:47.349 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:05:27.076 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:05:27.077 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:07:42.782 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:07:42.783 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:10:48.270 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:14:48.401 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:16:47.550 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:16:47.552 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:17:10.354 NotebookApp] Kernel started: 990a6201-4ece-45f7-b7eb-e13306358a52
+[W 21:17:10.432 NotebookApp] 404 GET /nbextensions/nbpresent/css/nbpresent.min.css (::1) 3.14ms referer=http://localhost:8888/notebooks/Test/Untitled.ipynb
+[I 21:18:47.357 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:18:47.359 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:19:11.313 NotebookApp] Saving file at /Test/Untitled.ipynb
+[I 21:20:29.793 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:22:35.577 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:22:37.545 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:22:39.632 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:22:51.353 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:22:51.584 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:22:57.316 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:22:57.317 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:22:57.521 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:22:57.522 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:22:57.702 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:22:57.703 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:24:31.100 NotebookApp] Saving file at /GAN/dcgan-svhn/DCGAN.ipynb
+[W 21:24:31.101 NotebookApp] Saving untrusted notebook GAN/dcgan-svhn/DCGAN.ipynb
+[I 21:24:48.256 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:24:52.790 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:24:52.983 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:24:55.210 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:28:48.260 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:30:40.905 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:30:41.177 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:30:43.991 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:32:48.244 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:34:22.450 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:34:40.836 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:34:41.162 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:36:51.436 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:38:51.434 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:40:52.285 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:42:51.428 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:46:27.206 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:47:21.733 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:47:22.021 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:48:05.483 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:48:05.755 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:48:08.672 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:48:51.428 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:49:27.289 NotebookApp] Kernel restarted: 7f4c8c6c-6973-4237-acb4-73364d202246
+[I 21:49:27.313 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:49:39.065 NotebookApp] Kernel shutdown: 7f4c8c6c-6973-4237-acb4-73364d202246
+[I 21:49:39.772 NotebookApp] Kernel started: 26e61998-2106-4e83-b941-30243e00a7bf
+2018-03-08 21:49:51.936012: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.1 instructions, but these are available on your machine and could speed up CPU computations.
+2018-03-08 21:49:51.936067: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use SSE4.2 instructions, but these are available on your machine and could speed up CPU computations.
+2018-03-08 21:49:51.936087: W tensorflow/core/platform/cpu_feature_guard.cc:45] The TensorFlow library wasn't compiled to use AVX instructions, but these are available on your machine and could speed up CPU computations.
+[I 21:50:51.417 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:50:56.344 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:51:52.784 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:52:51.427 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:54:51.430 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:56:51.422 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 21:58:52.276 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:00:51.412 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:02:52.280 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:04:52.279 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:06:23.848 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:06:35.421 NotebookApp] Kernel interrupted: 26e61998-2106-4e83-b941-30243e00a7bf
+[I 22:06:36.915 NotebookApp] Kernel interrupted: 26e61998-2106-4e83-b941-30243e00a7bf
+[I 22:06:37.106 NotebookApp] Kernel interrupted: 26e61998-2106-4e83-b941-30243e00a7bf
+[I 22:06:37.320 NotebookApp] Kernel interrupted: 26e61998-2106-4e83-b941-30243e00a7bf
+[I 22:06:37.511 NotebookApp] Kernel interrupted: 26e61998-2106-4e83-b941-30243e00a7bf
+[I 22:06:37.713 NotebookApp] Kernel interrupted: 26e61998-2106-4e83-b941-30243e00a7bf
+[I 22:06:45.585 NotebookApp] Kernel restarted: 26e61998-2106-4e83-b941-30243e00a7bf
+[I 22:06:51.418 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
+[I 22:06:55.697 NotebookApp] Saving file at /Projects/face_generation/dlnd_face_generation.ipynb
