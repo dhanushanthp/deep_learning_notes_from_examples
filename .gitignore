@@ -7,3 +7,4 @@ Test/
 Projects/.DS_Store
 .DS_Store
 nohup.out
+*.pyc
