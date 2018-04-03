@@ -7,3 +7,5 @@ Test/
 Projects/.DS_Store
 .DS_Store
 nohup.out
+*.pyc
+GAN/semi-supervised/data/
