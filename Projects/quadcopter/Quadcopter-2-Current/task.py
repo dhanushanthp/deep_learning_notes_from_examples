@@ -28,8 +28,24 @@ class Task():
 
     def get_reward(self):
         """Uses current pose of sim to return reward."""
-        reward = 1.-.3*(abs(self.sim.pose[:3] - self.target_pos)).sum()
-        # reward = -min(abs(self.sim.pose[2] - self.target_pos[2]), 10.0)
+#         reward = 1.-.3*(abs(self.sim.pose[:3] - self.target_pos[:3])).sum()
+#         reward = -min(abs(self.sim.pose[2] - self.target_pos[2]), 10.0)
+#         reward = np.clip(np.linalg.norm(self.sim.pose[:3] ,self.target_pos.all()), -1, 1)        
+
+        """Want my agent to balance horizontally. If it's failed to balance then I will punise it."""
+        angle_penalty = -abs(self.sim.pose[3:] - self.target_pos[3:]).sum()
+
+        """Move to the copter to it's height. Where this will give more reward to agent based on it's reach"""
+        z_reward = -abs(self.sim.pose[2] - self.target_pos[2])
+
+        """Keep the agent in X, Y axis in other words vertically stable. So it should not move in X or Y directions
+        .If moves then punish it"""
+        x_y_reward = -abs(self.sim.pose[:2] - self.target_pos[:2]).sum()                    
+
+        penalties = (x_y_reward  + z_reward + angle_penalty)/3
+
+        reward =  1 + penalties * 0.01
+        
         return reward
 
     def step(self, rotor_speeds):
